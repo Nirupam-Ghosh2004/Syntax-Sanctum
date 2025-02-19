@@ -3,7 +3,7 @@ public class vowel {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter a char: ");
-        char ch = 'a';
+        String ch = sc.next();
         String str ="aeiou";
         if(str.indexOf(ch)!=-1)
         {
