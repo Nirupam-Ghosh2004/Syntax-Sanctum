@@ -1,3 +1,4 @@
+//Concat 2 strings and reverse it
 import java.util.*;
 class concat
 {

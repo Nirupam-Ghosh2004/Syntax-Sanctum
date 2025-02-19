@@ -1,3 +1,4 @@
+//check if a character is vowel or not
 import java.util.*;
 public class vowel {
     public static void main(String[] args) {
