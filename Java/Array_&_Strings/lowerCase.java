@@ -7,15 +7,8 @@ public class lowerCase {
         System.out.println("Enter the string : ");
         String str = in.nextLine();
         char ch = str.charAt(0);
-        if(Character.isUpperCase(ch))
-        {
-            str =str.toUpperCase();
-        }
-        else
-        if(Character.isLowerCase(ch))
-        {
-            str=str.toLowerCase();
-        }
+
+        str=(Character.isUpperCase(ch))?str.toUpperCase():str.toLowerCase();
         System.out.println(str);
         in.close();
     }
