@@ -13,5 +13,6 @@ class concat
             str = str + s3.charAt(i);
         }
         System.out.println(str);
+        in.close();
     }
 }
