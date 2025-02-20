@@ -8,7 +8,7 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 path="/home/tuhin/Documents/Syntax-Sanctum/Python/AI_ML/Basics/Data_Set/"
-
+#Logistic Regression
 
 X=pd.read_excel(path+"X.xlsx")
 Y=pd.read_excel(path+"Y.xlsx")
