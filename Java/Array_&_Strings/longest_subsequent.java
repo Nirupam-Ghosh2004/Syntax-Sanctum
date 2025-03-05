@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Arrays; 
 class longest_subsequent {
     void path(int arr[], int l,int h)
     {
