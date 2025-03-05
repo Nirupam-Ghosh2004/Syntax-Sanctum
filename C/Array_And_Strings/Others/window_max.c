@@ -1,4 +1,5 @@
 #include <stdio.h>
+// Window maximum problem
 void maximum(int *arr, int l, int h)
 {
     int m = arr[l];
