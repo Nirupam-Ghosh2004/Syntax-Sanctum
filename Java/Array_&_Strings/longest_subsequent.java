@@ -20,9 +20,6 @@ class longest_subsequent {
         System.out.print("Enter the size of the array : ");
         int n = in.nextInt();
         int arr[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = 0;
-        }
         ob.print(arr, n);
         System.out.print("Enter how many pair you want to enter : ");
         int v = in.nextInt();
