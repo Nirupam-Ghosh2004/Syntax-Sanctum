@@ -1,6 +1,6 @@
 //Maximum Consequetive 1
 import java.util.*;
-class longest_subsequent {
+class Maximum_Consequtive_1 {
     void path(int arr[], int l,int h)
     {
         for(int i=l-1; i<=h-1; i++)
@@ -17,7 +17,7 @@ class longest_subsequent {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        longest_subsequent ob = new longest_subsequent();
+        Maximum_Consequtive_1 ob = new Maximum_Consequtive_1();
         System.out.print("Enter the size of the array : ");
         int n = in.nextInt();
         int arr[] = new int[n];
