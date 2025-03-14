@@ -1,3 +1,4 @@
+//Maximum Consequetive 1
 import java.util.*;
 class longest_subsequent {
     void path(int arr[], int l,int h)
@@ -32,8 +33,7 @@ class longest_subsequent {
             ob.path(arr,arr1[0],arr1[1]);
         }
         ob.print(arr, n);
-        int c=0,p=0;
-        int arr2[]=new int[10];
+        int c=0,res=0;
         for(int i=0; i<n; i++)
         {
             if(arr[i]==1)
@@ -42,21 +42,18 @@ class longest_subsequent {
             }
             else
             {
-                arr2[p]=c;
-                c=0;
-                p++;
+                if(c>res)
+                {
+                    res=c;
+                    c=0;
+                }
             }
         }
-        arr2[p]=c;
-        int max = arr2[0];
-        for(int i =0; i<=p; i++)
+        if(c>0)
         {
-            if(arr2[i]>max)
-            {
-                max=arr2[i];
-            }
+            res=c;
         }
-        System.out.println("Longest path :  "+max);
+        System.out.println("Longest path :  "+res);
         in.close();
     }
 }
