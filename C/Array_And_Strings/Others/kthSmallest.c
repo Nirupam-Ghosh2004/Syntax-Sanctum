@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <limits.h>
-// Window maximum problem
 void print(int *arr, int n)
 {
     printf("The array elements are : ");
@@ -26,7 +25,7 @@ int main()
     int min;
     printf("Enter the number : ");
     scanf("%d", &x);
-    int max =0 ;
+    int max =INT_MIN ;
     while(x!=0)
     {
     min = INT_MAX;
