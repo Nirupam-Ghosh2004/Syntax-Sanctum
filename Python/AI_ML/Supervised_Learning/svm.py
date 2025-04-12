@@ -20,23 +20,27 @@ from sklearn import preprocessing
 from sklearn import svm
 from sklearn.preprocessing import LabelEncoder
 path="/home/tuhin/Documents/Syntax-Sanctum/Python/AI_ML/Basics/Data_Set/"
-data=pd.read_csv(path+"Iris_Dataset.csv")
-X=data.drop("species",axis=1)
-data1=pd.read_csv(path+"Iris_Dataset.csv")
-data1.drop(data1.iloc[:,0:4],axis=1, inplace=True)
-Y=data1
-le = LabelEncoder()
-labels = le.fit_transform(Y)
-print(Y)
-print(labels)
+data=pd.read_csv(path+"cars_clus.csv")
 
+X = data.drop(['manufact', 'model'], axis=1)
 
-X_train,X_test,Y_train,Y_test=train_test_split(X,labels,test_size=0.4,random_state=15)
-support_vector_machine=svm.SVC(kernel='linear', C=1.0)
-support_vector_machine.fit(X_train,Y_train)
-Y_pred=support_vector_machine.predict(X_test)
-result=0
-confusion_matrix = confusion_matrix(Y_test,Y_pred)
-acc=accuracy_score(Y_test,Y_pred)
-print("Accuracy using function is : ",acc*100)
-print(confusion_matrix)
+Y = data['type']
+
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.4, random_state=15)
+
+svm_model = svm.SVC(kernel='linear', C=1.0)
+svm_model.fit(X_train, Y_train)
+
+Y_pred = svm_model.predict(X_test)
+
+acc = accuracy_score(Y_test, Y_pred)
+conf_matrix = confusion_matrix(Y_test, Y_pred)
+precision = precision_score(Y_test, Y_pred, average='weighted', zero_division=0)
+recall = recall_score(Y_test, Y_pred, average='weighted')
+f1 = f1_score(Y_test, Y_pred, average='weighted')
+
+print("Accuracy: {:.2f}%".format(acc * 100))
+print("Precision:", precision)
+print("Recall:", recall)
+print("F1 Score:", f1)
+print("Confusion Matrix:\n", conf_matrix)

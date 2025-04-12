@@ -9,7 +9,7 @@ public class repeating {
         {
             map.put(ch,map.getOrDefault(ch,0)+1);
         }
-
+        
         char nr= '\0';
         for (char ch : str.toCharArray()) {
             if (map.get(ch) == 1) {
