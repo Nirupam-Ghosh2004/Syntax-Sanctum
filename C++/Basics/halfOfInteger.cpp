@@ -1,10 +1,11 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int x =10;
-    int y = ++x;
-    y+=
-    int n = ch -'0';
-    cout<<n;
+    float x;
+    cout<<"Enter a number : ";
+    cin>>x;
+    float y= abs(x);
+    cout<<y;
+    cout<<"Half of Integer : "<<(float)x/2;
     return 0;
 }
