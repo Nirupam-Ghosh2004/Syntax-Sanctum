@@ -130,7 +130,7 @@ void learn_vector()
     v.clear();
     //-----------------------------------------------------------------------------------------------------
     // Empty check
-    cout<<v.empty()<<endl;
+    cout<<v.empty()<<endl; 
 }
 int main()
 {
