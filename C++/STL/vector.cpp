@@ -16,13 +16,18 @@ void learn_vector()
         cout << *(it++) << " ";
     }
     cout << endl;
+
+
     //-----------------------------------------------------------------------------------------------------
+    
     vector<pair<int, int>> vp;
     vp.push_back({1, 2});
     vp.emplace_back(6, 9);
 
     cout << vp[1].second << endl;
+
     //-----------------------------------------------------------------------------------------------------
+    
     vector<int> vec(10, 3);
     // printing using iterator
     vector<int>::iterator it1 = vec.begin();
@@ -31,7 +36,9 @@ void learn_vector()
         cout << *(it1++) << " ";
     }
     cout << endl;
+
     //-----------------------------------------------------------------------------------------------------
+    
     // Iterator
     // accessing elements in a vector
     cout << v[0] << " " << v.at(2) << endl;
@@ -47,7 +54,9 @@ void learn_vector()
     cout << "rend : " << *(b) << endl;
     vector<int>::reverse_iterator c = v.rbegin(); // reverse begin : points at the last element
     cout << "rbegin : " << *c << endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Printing vector
     for (vector<int>::iterator t = v.begin(); t < v.end(); t++)
     {
@@ -66,7 +75,9 @@ void learn_vector()
         cout << p << " ";
     }
     cout << endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Erase element from vector
     v.erase(v.begin() + 1);
     for (auto t1 = v.begin(); t1 < v.end(); t1++)
@@ -80,7 +91,9 @@ void learn_vector()
         cout << *(t1) << " ";
     }
     cout << endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Insert Function
     v.insert(v.begin() + 1, 5);
     for (auto p : v)
@@ -95,7 +108,9 @@ void learn_vector()
         cout << p << " ";
     }
     cout << endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Copy
     vector<int> copy(4, 6);
     v.insert(v.begin() + 2, copy.begin(), copy.end());
@@ -104,17 +119,23 @@ void learn_vector()
         cout << a << " ";
     }
     cout << endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Size
     int len = v.size();
     cout << "Size of vector(v) : " << len << " " << endl;
+   
     //-----------------------------------------------------------------------------------------------------
+    
     // Pop
     v.pop_back();
     for(int i : v)
         cout<<i<<" ";
     cout<<endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Swap
     copy.swap(v);
     cout<<"copy : ";
@@ -125,10 +146,14 @@ void learn_vector()
     for(int i : v)
         cout<<i<<" ";
     cout<<endl;
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Clear
     v.clear();
+    
     //-----------------------------------------------------------------------------------------------------
+    
     // Empty check
     cout<<v.empty()<<endl; 
 }
