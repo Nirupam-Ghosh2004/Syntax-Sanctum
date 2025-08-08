@@ -1,8 +1,18 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-
-
+void del_mid(stack <int> &st,int n,int c)
+{
+    if(c==(n/2))
+    {
+        st.pop();
+        return;
+    }
+    int num = st.top();
+    st.pop();
+    del_mid(st,n,c+1);
+    st.push(num);
+}
 int main()
 {
     // stack creation and insertion
@@ -19,7 +29,7 @@ int main()
     }
 
     // Function call
-    reverse(st)
+    del_mid(st,n,0);
     // popping and printing the stack;
     while(!st.empty())
     {
