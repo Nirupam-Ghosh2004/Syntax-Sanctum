@@ -1,6 +1,1 @@
-while(!st.empty())
-    {
-        cout<<st.top()<<" ";
-        st.pop();
-    }
-    cout<<endl;
+// Move elements from st1 back to st if they are greater than temp
