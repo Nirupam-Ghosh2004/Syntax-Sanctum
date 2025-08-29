@@ -2,28 +2,23 @@
 #include <stack>
 using namespace std;
 
-stack<int> sortStack(stack<int> &st)
+stack<int> sortStack(stack<int> &st) //sort function
 {
-    stack<int> st1; 
-
+    stack<int> st1;
     while (!st.empty())
     {
         int temp = st.top();
         st.pop();
-
         while (!st1.empty() && st1.top() > temp)
         {
             st.push(st1.top());
             st1.pop();
         }
-
         st1.push(temp);
     }
-
-    return st1; 
+    return st1;
 }
-
-int main()
+int main()  //main function
 {
     stack<int> st;
     cout << "Enter the size of the stack: ";
@@ -46,6 +41,6 @@ int main()
         cout << sortedStack.top() << " ";
         sortedStack.pop();
     }
-
+    
     return 0;
 }
