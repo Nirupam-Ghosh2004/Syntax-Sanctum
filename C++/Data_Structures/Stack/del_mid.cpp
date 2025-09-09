@@ -28,7 +28,7 @@ int main()
         st.push(st1.top());
         st1.pop();
     }
-    while(!st.empty())
+    
     {
         cout<<st.top()<<" ";
         st.pop();

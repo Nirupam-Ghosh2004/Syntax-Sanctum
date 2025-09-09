@@ -1,1 +1,2 @@
-// Move elements from st1 back to st if they are greater than temp
+
+        cin>>num;

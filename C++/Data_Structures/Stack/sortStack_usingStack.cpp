@@ -9,7 +9,7 @@ stack<int> sortStack(stack<int> &st) //sort function
     {
         int temp = st.top();
         st.pop();
-        while (!st1.empty() && st1.top() > temp)
+        while (!st1.empty() && st1.top() < temp)
         {
             st.push(st1.top());
             st1.pop();
@@ -41,6 +41,6 @@ int main()  //main function
         cout << sortedStack.top() << " ";
         sortedStack.pop();
     }
-    
+
     return 0;
 }
