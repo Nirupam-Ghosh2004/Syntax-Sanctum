@@ -5,6 +5,7 @@
     "files.associations": {
         "numeric": "cpp",
         "ranges": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }

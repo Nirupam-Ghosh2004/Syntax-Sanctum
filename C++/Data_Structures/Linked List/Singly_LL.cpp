@@ -21,7 +21,7 @@ public:
             delete next; // free memory of each node
             this->next = NULL;
         }
-        cout<<"Memory is free for node with data : "<<value<<endl;
+        cout << "Memory is free for node with data : " << value << endl;
     }
 };
 
@@ -65,35 +65,34 @@ void insertAtpos(node *&head, node *&tail, int pos, int d)
     temp->next = nn;
 }
 
-void delPos(node* &head, node* &tail, int pos)
+void delPos(node *&head, node *&tail, int pos)
 {
-    if(pos==1){
-        node* temp =head;
+    if (pos == 1)
+    {
+        node *temp = head;
         head = head->next;
         temp->next = NULL;
         delete temp;
     }
     else
     {
-        node* prev = NULL;
-        node* curr = head;
+        node *prev = NULL;
+        node *curr = head;
         int ctr = 1;
-        while(ctr < pos)
+        while (ctr < pos)
         {
             prev = curr;
             curr = curr->next;
             ctr++;
         }
         prev->next = curr->next;
-        if(curr->next == NULL)
+        if (curr->next == NULL)
         {
             tail = prev;
         }
         curr->next = NULL;
         delete curr;
-
     }
-
 }
 
 void print(node *head)
@@ -114,50 +113,48 @@ int main()
     node *tail = node1;
 
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAthead(head, 15);
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAthead(head, 20);
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAttail(tail, 5);
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAtpos(head, tail, 1, 56);
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAtpos(head, tail, 3, 59);
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAtpos(head, tail, 6, 90);
     print(head);
-
+    cout << "-----------------------------------------------" << endl;
     insertAtpos(head, tail, 8, 98);
     print(head);
-    
-    cout<<"Head ---> "<<head->data<<endl;
-    cout<<"Tail ---> "<<tail->data<<endl;
-    
-    delPos(head,tail,1);
+    cout << "-----------------------------------------------" << endl;
+    cout << "Head ---> " << head->data << endl;
+    cout << "Tail ---> " << tail->data << endl;
+    cout << "-----------------------------------------------" << endl;
+    delPos(head, tail, 1);
     print(head);
-
-    delPos(head,tail,3);
+    cout << "-----------------------------------------------" << endl;
+    delPos(head, tail, 3);
     print(head);
-
-    cout<<"Head ---> "<<head->data<<endl;
-    cout<<"Tail ---> "<<tail->data<<endl;
-
-    delPos(head,tail,6);
+    cout << "Head ---> " << head->data << endl;
+    cout << "Tail ---> " << tail->data << endl;
+    cout << "-----------------------------------------------" << endl;
+    delPos(head, tail, 6);
     print(head);
-
-    cout<<"Head ---> "<<head->data<<endl;
-    cout<<"Tail ---> "<<tail->data<<endl;
-
-    delPos(head,tail,5);
+    cout << "Head ---> " << head->data << endl;
+    cout << "Tail ---> " << tail->data << endl;
+    cout << "-----------------------------------------------" << endl;
+    delPos(head, tail, 5);
     print(head);
-
-    cout<<"Head ---> "<<head->data<<endl;
-    cout<<"Tail ---> "<<tail->data<<endl;
+    cout << "Head ---> " << head->data << endl;
+    cout << "Tail ---> " << tail->data << endl;
+    cout << "-----------------------------------------------" << endl;
     return 0;
 }
