@@ -7,5 +7,6 @@
         "ranges": "cpp",
         "iostream": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
