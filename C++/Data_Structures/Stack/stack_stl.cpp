@@ -1,19 +1,37 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-int main()
+
+void printStack(stack<int> s)
 {
-    stack<int> st;
-    // insert : 30 23 70
-    st.push(30);
-    st.push(23);
-    st.push(70);
-    cout<<"Size of the stack : "<<st.size()<<endl;
-    while(!st.empty())
+    while(s.empty()!=true)
     {
-        cout<<st.top()<<" ";
-        st.pop();
+        cout<<s.top()<<" ";
+        s.pop();
     }
     cout<<endl;
+}
+int main()
+{
+    //Creation of stack
+    stack<int> st;
+    st.push(10);
+    st.push(20);
+    st.push(30);
+
+    printStack(st);
+    st.pop();
+    printStack(st);
+    cout<<"Top element : "<<st.top()<<endl;
+
+    if(st.empty()==true)
+    {
+        cout<<"Stack is empty !!!";
+    }
+    else
+    {
+        cout<<"Stack is not empty";
+    }
+
     return 0;
 }
