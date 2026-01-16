@@ -3,6 +3,7 @@ public class chocolate {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        int r = 0;
         System.out.println("Enter the number : ");
         int a = in.nextInt();
         String str = Integer.toBinaryString(a) ;
